@@ -1,0 +1,24 @@
+# yazi.toml
+[mgr]
+show_hidden = true
+sort_by = "mtime"
+sort_reverse = true
+linemode = "size_and_mtime"
+
+[plugin]
+prepend_previewers = [
+    { mime = "audio/*",   run = "exifaudio"},
+	{ mime = "application/*zip",            run = "ouch" },
+	 { name = "*.zip", run = "ouch" },
+]
+
+# [opener]
+# extract = [
+# 	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
+# ]
+
+[[plugin.prepend_fetchers]]
+id   = "mime"
+name = "*"
+run  = "mime-ext"
+prio = "high"
