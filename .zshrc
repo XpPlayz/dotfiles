@@ -36,7 +36,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
+source $HOME/zsh/functions
 # Check archlinux plugin commands here
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
 
@@ -45,7 +45,7 @@ source $ZSH/oh-my-zsh.sh
 #fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # Set-up icons for files/folders in terminal
-alias ls='eza -lh --group-directories-first --icons=auto'
+alias ls='eza --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
