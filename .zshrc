@@ -45,10 +45,12 @@ source $ZSH/oh-my-zsh.sh
 #fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # Set-up icons for files/folders in terminal
-alias ls='lsd -a'
-alias ll='lsd -al'
-alias lt='lsd -a --tree'
-
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'
+"
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
@@ -56,6 +58,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+HISTCONTROL=ignoreboth
 
 bindkey '^[ ' autosuggest-accept
 
@@ -80,6 +83,7 @@ alias lg='lazygit'
 alias wlc='wl-copy'
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+alias vi='nvim'
 
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
