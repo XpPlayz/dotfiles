@@ -44,3 +44,6 @@ Status:children_add(function(self)
 		return ""
 	end
 end, 3300, Status.LEFT)
+
+-- folder-rules.yazi
+require("folder-rules"):setup()
