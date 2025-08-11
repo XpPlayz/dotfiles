@@ -6,16 +6,15 @@ local servers = {
   cssls = {},
   ts_ls = {},
   bashls = {},
-
-  pyright = {
-    settings = {
-      python = {
-        analysis = {
-          autoSearchPaths = true,
-          typeCheckingMode = "basic",
-        },
-      },
-    },
+  clangd = {},
+  jsonls = {},
+  basedpyright = {
+    analysis = {
+      diagnosticMode = "openFilesOnly",
+      inlayHints = {
+        callArgumentNames = true
+      }
+    }
   },
 }
 
