@@ -1,7 +1,7 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 
 # you can choose themes from $HOME/.config/kitty/kitty-themes/
-include ./kitty-themes/01-Wallust.conf
+# include ./kitty-themes/01-Wallust.conf
 
 font_family FiraCodeNerdFont
 font_size 12.0
@@ -33,6 +33,6 @@ window_padding_width 4
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Adwaita darker
 include current-theme.conf
 # END_KITTY_THEME
