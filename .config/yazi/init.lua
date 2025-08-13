@@ -47,3 +47,11 @@ end, 3300, Status.LEFT)
 
 -- folder-rules.yazi
 require("folder-rules"):setup()
+
+-- fix HEIC FILES
+require("mime-ext"):setup {
+	with_exts = {
+		heic = "image/heic",
+		-- ...
+	},
+}
