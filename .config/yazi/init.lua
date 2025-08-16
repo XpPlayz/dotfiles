@@ -23,12 +23,6 @@ Status:children_add(function(self)
 	end
 end, 3300, Status.LEFT)
 
--- custom shell
-require("custom-shell"):setup({
-    history_path = "/home/ronaldo/.zsh_history",
-    save_history = true,
-})
-
 -- copy-file-contents.yazi
 require("copy-file-contents"):setup({
 	append_char = "\n",
@@ -55,3 +49,9 @@ require("mime-ext"):setup {
 		-- ...
 	},
 }
+
+-- git.yazi
+th.git = th.git or {}
+th.git.modified_sign = "M"
+th.git.deleted_sign = "D"
+require("git"):setup()
