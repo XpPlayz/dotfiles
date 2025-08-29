@@ -1,6 +1,6 @@
 # Display Pokemon-colorscripts (except in neovim and vscode)
 if [[ "$TERM_PROGRAM" != "code" && -z "$NVIM" ]]; then
-    pokemon-colorscripts --no-title -s -r
+    pokemon-colorscripts -s -r
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
