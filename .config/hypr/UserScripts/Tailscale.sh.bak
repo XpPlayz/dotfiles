@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check if tailscale is running
+if pgrep -x "tailscaled" > /dev/null; then
+    echo "Stopping Tailscale..."
+    sudo tailscale down
+    sudo systemctl stop tailscaled
+else
+    echo "Starting Tailscale..."
+    sudo systemctl start tailscaled
+
+    # Give it a second to start
+    sleep 2
+
+    echo "Bringing Tailscale up..."
+    sudo tailscale up
+
+    echo "Setting exit node to 'nexus'..."
+    sudo tailscale set --exit-node nexus
+fi
