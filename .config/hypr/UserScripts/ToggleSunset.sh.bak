@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Define the location for wlsunset
+WLSUNSET_CMD="wlsunset -l 33.1 -L -97.2"
+
+# Check if wlsunset is running
+if pgrep -x "wlsunset" > /dev/null; then
+    # If wlsunset is running, kill it and start hyprsunset
+    pkill wlsunset
+    hyprsunset --temperature 2500 &
+else
+    # If wlsunset is not running, kill hyprsunset and start wlsunset with your location
+    pkill hyprsunset
+    $WLSUNSET_CMD &
+fi
