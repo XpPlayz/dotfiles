@@ -103,3 +103,6 @@ function y() {
 # spicetify
 export PATH=$PATH:/home/ronaldo/.spicetify
 
+
+# Created by `pipx` on 2025-09-10 05:05:00
+export PATH="$PATH:/home/ronaldo/.local/bin"
