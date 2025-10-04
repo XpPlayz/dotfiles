@@ -22,7 +22,14 @@ on   = "l"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
+# toggle hidden
 [[mgr.prepend_keymap]]
 on = "<C-h>"
 run = ["hidden toggle"]
 desc = "Toggle the visibility of hidden content"
+
+#recycle-bin.yazi
+[[mgr.prepend_keymap]]
+on = [ "R", "b" ]
+run = "plugin recycle-bin"
+desc = "Open Recycle Bin menu"
